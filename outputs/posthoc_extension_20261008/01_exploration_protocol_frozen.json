@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-08T13:15:29.501757+08:00",
+  "classification": "事后探索；已知历史开发数据上的有限扩展；不是新的完全未见样本确认",
+  "forbidden": "No reading or evaluation of 2024-2025 holdout in this extension",
+  "development": [
+    "2020-04-01",
+    "2023-12-29"
+  ],
+  "design_early": [
+    "2020-04-01",
+    "2022-06-30"
+  ],
+  "validation_late": [
+    "2022-07-01",
+    "2023-12-29"
+  ],
+  "max_revision": 1,
+  "selected_hypothesis": "E1",
+  "initial_code_sha256": "d0068eb7ef04d3384154e31eb0a42d441d1ac718d998f3c6704d09afb08e8722",
+  "model_interaction_sha256": "d12a8da11f8492535806e01145d3c96380fed6e3baadca3afbea8d889e258eef",
+  "selection_of_final_exploration_version": "Choose once after early design diagnostics; then evaluate late validation without further changes. Preserve signed direction.",
+  "hac": "Newey-West/Bartlett, maxlags=4, reflecting 5-day overlapping forward returns."
+}

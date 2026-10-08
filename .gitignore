@@ -1,0 +1,39 @@
+# Raw and local market data
+data/
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+credentials*.json
+secrets*.json
+*token*.txt
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

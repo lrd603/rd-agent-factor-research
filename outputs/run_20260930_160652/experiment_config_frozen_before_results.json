@@ -1,0 +1,22 @@
+{
+  "experiment_name": "rd_agent_inspired_factor_mvp",
+  "seed": 20260930,
+  "return_horizon_days": 5,
+  "execution_lag_days": 1,
+  "purge_days": 6,
+  "quantiles": 5,
+  "winsor_lower": 0.01,
+  "winsor_upper": 0.99,
+  "development": {"start": "2019-01-01", "end": "2022-12-30"},
+  "holdout": {"start": "2023-01-03", "end": "2024-12-31"},
+  "rolling_windows": [
+    ["2019-01-01", "2019-12-31"],
+    ["2020-01-01", "2020-12-31"],
+    ["2021-01-01", "2021-12-31"],
+    ["2022-01-01", "2022-12-30"]
+  ],
+  "benchmark": {"name": "momentum_20d", "formula": "close[t]/close[t-20]-1", "pre_specified": true},
+  "data_priority": ["data/raw/market.parquet", "data/raw/market.csv"],
+  "synthetic": {"start": "2018-01-01", "end": "2024-12-31", "n_symbols": 80}
+}
+

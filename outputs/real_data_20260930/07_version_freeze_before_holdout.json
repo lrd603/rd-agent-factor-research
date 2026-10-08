@@ -1,0 +1,8 @@
+{
+  "frozen_at": "2026-09-30T09:35:25.140738+00:00",
+  "selected": "candidate_v2",
+  "rule": "higher development mean_rank_ic between V1 and the single V2 revision; tie by factor name",
+  "holdout_evaluated": false,
+  "v1_sha256": "6600e6c1e5739e11a160929a42acb4d0d587fd4176f2a748b8f9fac7d874c2b6",
+  "v2_sha256": "d0d61620bf192f90b0c8912f11c7eddb6c082966f929c7fb857a58162bbd99ab"
+}

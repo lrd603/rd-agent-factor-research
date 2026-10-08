@@ -1,0 +1,20 @@
+{
+  "record_type": "actual_codex_feedback_after_early_design",
+  "generated_at": "2026-10-08T12:24:00+08:00",
+  "actual_diagnostic_input": {
+    "period": ["2020-04-01", "2022-06-30"],
+    "initial_mean_ic": -0.000446,
+    "initial_ic_hac_95": [-0.017053, 0.016162],
+    "initial_mean_rank_ic": 0.015055,
+    "initial_rank_ic_hac_95": [0.001491, 0.028618],
+    "initial_q5_minus_q1": 0.001106,
+    "initial_top_group_turnover": 0.275865,
+    "mean_daily_spearman_with_momentum20": -0.290658,
+    "mean_daily_spearman_with_reversal5": 0.609037,
+    "observation": "Rank IC is positive but the weak, non-monotone group spread and 0.609 correlation with reversal indicate substantial redundancy with ordinary 5-day reversal."
+  },
+  "actual_model_suggestion": "Use the sole allowed revision to cross-sectionally regress the initial turnover-shock reversal signal on plain 5-day reversal each day and retain the residual. This directly targets the diagnosed redundancy while preserving the sign of the incremental turnover interaction. Do not tune the lookbacks, threshold, direction, or residualization after seeing the late segment.",
+  "implemented_formula": "residual_cs(-ret_5d * max(log(mean(turnover,5)/mean(turnover,60)),0) | -ret_5d)",
+  "decision": "Implement once, freeze, evaluate the late development segment, and stop regardless of sign.",
+  "revision_count": 1
+}

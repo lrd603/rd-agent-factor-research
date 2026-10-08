@@ -1,0 +1,41 @@
+{
+  "actor": "Codex（人工监督原型；不是独立运行的外部 LLM/多 agent 系统）",
+  "generated_at": "2026-09-30T08:05:15.327952+00:00",
+  "model_input": "基于可用日频字段提出3个可检验因子假设；禁止查看本次回测表现；选择一个实现。",
+  "model_output": [
+    {
+      "id": "H1",
+      "name": "skip_recent_momentum",
+      "formula": "close[t-5]/close[t-60]-1",
+      "reason": "中期趋势可能延续，跳过近期以减轻短期反转干扰",
+      "requires": [
+        "close"
+      ]
+    },
+    {
+      "id": "H2",
+      "name": "volume_confirmed_momentum",
+      "formula": "mom20 * zscore(log(volume20/volume60))",
+      "reason": "成交活跃度可能确认趋势",
+      "requires": [
+        "close",
+        "volume"
+      ]
+    },
+    {
+      "id": "H3",
+      "name": "low_volatility",
+      "formula": "-std(ret,20)",
+      "reason": "低波动异象可能带来横截面预测力",
+      "requires": [
+        "close"
+      ]
+    }
+  ],
+  "selected": "H1（字段最稳健、与预指定20日动量基准存在清晰但非同一的经济差异）",
+  "benchmark_pre_specified": {
+    "name": "momentum_20d",
+    "formula": "close[t]/close[t-20]-1",
+    "pre_specified": true
+  }
+}

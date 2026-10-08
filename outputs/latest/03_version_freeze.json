@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-09-30T08:07:15.791652+00:00",
+  "selected_final_version": "candidate_v1",
+  "selection_rule_pre_holdout": "V1与唯一修改V2中开发期 mean_rank_ic 较高者；平局按名称排序",
+  "holdout_not_accessed_before_freeze": true,
+  "code_sha256": {
+    "factors_v1.py": "6600e6c1e5739e11a160929a42acb4d0d587fd4176f2a748b8f9fac7d874c2b6",
+    "factors_v2.py": "d0d61620bf192f90b0c8912f11c7eddb6c082966f929c7fb857a58162bbd99ab"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "development": {
+    "rank_corr_log_market_cap": 0.10722359291297776,
+    "industry_mean_abs_zscore": 0.0804722642033043
+  },
+  "holdout": {
+    "rank_corr_log_market_cap": 0.11361406079224412,
+    "industry_mean_abs_zscore": 0.12245494588996414
+  }
+}

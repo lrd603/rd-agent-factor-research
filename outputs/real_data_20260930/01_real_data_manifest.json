@@ -1,0 +1,62 @@
+{
+  "audited_at": "2026-09-30T09:32:55.023970+00:00",
+  "read_only_source": "D:/quant_project/multi_factor_stock_selection/data/raw",
+  "source_identity": "AkShare A-share daily history cache; Eastmoney primary/Tencent fallback according to source loader",
+  "is_real_market_data": true,
+  "adjustment": "qfq according to source project configuration and loader; raw rows do not embed this metadata",
+  "fields": [
+    "date",
+    "symbol",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "amount",
+    "turnover",
+    "data_source"
+  ],
+  "checks": {
+    "rows": 670233,
+    "symbols": 499,
+    "start": "2020-01-02",
+    "end": "2025-12-31",
+    "duplicate_keys": 0,
+    "nonpositive_prices": 0,
+    "optional_fields": {
+      "volume": true,
+      "market_cap": false,
+      "industry": false
+    }
+  },
+  "file_count": 500,
+  "effective_stock_count": 499,
+  "empty_price_file": "601112.csv",
+  "raw_nonpositive_open_or_close_rows_converted_to_nan": 608,
+  "sample_sha256_first_last_5": {
+    "000009.csv": "9f6bd001c7c537e5cdef9693823e759012a460f61fd4848115e5b80e394c3f02",
+    "000021.csv": "dc37a77557b95cb7836e37ee8f50e660cf456dbe706bafa5bd6cd5964c3701f4",
+    "000027.csv": "d4231dd00683d57cb2965dec2980105d5e480cd28e051f933a83d4e406d58e37",
+    "000032.csv": "f89a84f938ee16aa40dfc54b45beaa13c6baf27d37f4e7d0deaec56f6fce7b52",
+    "000034.csv": "0e7ea2c97c8058e6b033bbe9334b57e1be00c1c8cb68c8ddb0c958618dcc616e",
+    "688772.csv": "2893746f9f53a2b3116fb0c891a3c0a5fe0637eaa34f4916d3666d92f83a6d26",
+    "688777.csv": "64cb098788291056da9a34a2d036950d49363c6843c882e4097ebf2828f1e882",
+    "688778.csv": "dff64a7621d4393662a2f105b8a9f4e12a1453e7d26bf8a006689e502822a4f0",
+    "688819.csv": "9bc294a5987f62ecea014ae0ca469bd07089b004e57df5cbc73eaf19cf8664c1",
+    "689009.csv": "6f008cb85eb104cf28f6c04547ea8f39f09bf3d23a4917e2dda56031abc2adca"
+  },
+  "source_evidence_files": [
+    "D:/quant_project/multi_factor_stock_selection/config.yaml",
+    "D:/quant_project/multi_factor_stock_selection/src/data_loader.py"
+  ],
+  "excluded_non_stock_csv": [
+    "benchmark_csi500.csv (no symbol column)"
+  ],
+  "limitations": [
+    "500 schema-eligible stock CSV files were found; 601112.csv is empty, leaving 499 effective stocks",
+    "The cached universe is current/existing-universe based; historical delistings are incomplete and survivorship bias is present",
+    "CSV rows lack embedded vendor and adjustment metadata; provenance relies on source code/config",
+    "qfq open is used for return alignment, not a literal executable historical price",
+    "nonpositive OHLC placeholders are converted to missing without forward fill"
+  ]
+}

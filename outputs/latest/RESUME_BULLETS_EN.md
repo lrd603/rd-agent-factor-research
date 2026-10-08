@@ -1,0 +1,2 @@
+- Built a reproducible, Codex-supervised factor research prototype covering hypothesis logging, point-in-time signal construction, rolling diagnostics, one feedback-driven revision, and a frozen holdout evaluation.
+- Implemented consistent benchmark/candidate evaluation with IC, Rank IC, quantile returns, turnover, correlation, boundary purging, and optional size/industry diagnostics; validated the pipeline on synthetic data when no empirical dataset was available.

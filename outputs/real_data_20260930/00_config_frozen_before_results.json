@@ -1,0 +1,27 @@
+{
+  "experiment_name": "rd_agent_inspired_factor_real_validation",
+  "registered_at": "2026-09-30T16:20:00+08:00",
+  "return_horizon_days": 5,
+  "execution_lag_days": 1,
+  "purge_days": 6,
+  "quantiles": 5,
+  "winsor_lower": 0.01,
+  "winsor_upper": 0.99,
+  "development": {"start": "2020-04-01", "end": "2023-12-29"},
+  "holdout": {"start": "2024-01-02", "end": "2025-12-31"},
+  "rolling_windows": [
+    ["2020-04-01", "2020-12-31"],
+    ["2021-01-01", "2021-12-31"],
+    ["2022-01-01", "2022-12-30"],
+    ["2023-01-03", "2023-12-29"]
+  ],
+  "benchmark": {"name": "momentum_20d", "formula": "close[t]/close[t-20]-1", "pre_specified": true},
+  "candidate_v1": {"formula": "close[t-5]/close[t-60]-1", "status": "pre_registered_existing_project_code"},
+  "candidate_v2_allowed_revision": {"formula": "candidate_v1 / trailing_std(daily_return,20)", "max_revisions": 1},
+  "source_raw_dir": "D:/quant_project/multi_factor_stock_selection/data/raw",
+  "source_project_config": "D:/quant_project/multi_factor_stock_selection/config.yaml",
+  "source_loader": "D:/quant_project/multi_factor_stock_selection/src/data_loader.py",
+  "price_basis": "qfq according to source project configuration and loader; raw rows do not embed this metadata",
+  "universe_limitation": "501 cached files from a current/existing universe; historical delistings incomplete, survivorship bias present"
+}
+

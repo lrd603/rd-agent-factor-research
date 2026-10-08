@@ -1,0 +1,8 @@
+{
+  "label_alignment": "signal at t close; entry qfq open t+1; exit qfq open t+6",
+  "rolling_grouping": "all shifts/pct_change/rolling operations grouped by symbol",
+  "missing_values": "rolling warm-up and absent future labels remain NaN; evaluation drops only factor/label missing rows per date",
+  "turnover": "1 - intersection(top-quintile symbols_t, symbols_t-1)/size(top_t)",
+  "boundary_leakage": "period_slice requires label_exit_date <= period end; start uses only trailing raw history",
+  "execution_limitation": "qfq open and no suspension/limit/cost model; factor diagnostic only"
+}

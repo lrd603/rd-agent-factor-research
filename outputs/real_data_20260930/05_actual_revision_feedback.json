@@ -1,0 +1,22 @@
+{
+  "record_type": "actual_codex_supervised_decision_after_development_v1",
+  "recorded_at": "2026-09-30T17:35:00+08:00",
+  "model_role": "Codex in the current user-supervised session; no external paid API and no autonomous multi-agent framework",
+  "input_actually_inspected": {
+    "source_file": "04_development_v1.csv",
+    "candidate_v1_mean_ic": 0.001882,
+    "candidate_v1_mean_rank_ic": -0.020470,
+    "candidate_v1_top_minus_bottom_mean_5d_return": -0.001384,
+    "candidate_v1_mean_top_group_turnover": 0.097686,
+    "benchmark_mean_rank_ic": -0.022949
+  },
+  "output_decision": "Implement the single pre-registered V2 revision: divide skip-recent 60-day momentum by trailing 20-day realized volatility, then apply the same cross-sectional preprocessing.",
+  "reason": "V1 has negative rank IC and a negative Q5-Q1 spread while Pearson IC is slightly positive. The disagreement is consistent with unstable magnitude/tail effects or heterogeneous risk. Volatility scaling is a simple ex-ante permitted attempt to reduce domination by high-noise names; it is a testable hypothesis, not a claim that performance will improve.",
+  "provenance_limits": {
+    "dynamic_external_agent_call": false,
+    "hard_coded_template_presented_as_model_output": false,
+    "formula_family_was_pre_registered_before_v1": true,
+    "decision_to_use_it_was_made_after_inspecting_v1": true,
+    "further_revisions_allowed": false
+  }
+}

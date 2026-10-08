@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "synthetic_validation_only",
+    "path": null,
+    "warning": "仅用于验证程序，不能作为因子实证结果"
+  },
+  "checks": {
+    "rows": 146160,
+    "symbols": 80,
+    "start": "2018-01-01",
+    "end": "2024-12-31",
+    "duplicate_keys": 0,
+    "nonpositive_prices": 0,
+    "optional_fields": {
+      "volume": true,
+      "market_cap": true,
+      "industry": true
+    }
+  }
+}

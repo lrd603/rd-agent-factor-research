@@ -1,0 +1,11 @@
+{
+  "historical_market_cap": "Unavailable in cached daily files; no size exposure diagnostic or synthetic backfill.",
+  "industry": "Unavailable in cached daily files. Any current classification would not establish point-in-time membership, so industry exposure diagnostic is omitted.",
+  "signal_timing": "All rolling inputs end at signal-date t; label is qfq open[t+6]/open[t+1]-1.",
+  "boundary": "Every period requires label_exit_date <= period end; holdout rows are removed before evaluation.",
+  "turnover_formula": "1 - |top_quintile_t intersect top_quintile_previous_signal_date| / |top_quintile_t|.",
+  "turnover_limitation": "Membership turnover on adjacent available signal dates; not weight turnover and excludes costs.",
+  "five_day_overlap": "Adjacent daily labels share four of five return sessions, inducing serial correlation. HAC maxlags=4 CIs are therefore primary; daily observations are not treated as iid.",
+  "original_selection_rule": "Existing project chose V2 because its signed development mean Rank IC (-0.01848) exceeded V1 (-0.02047). It did not choose by absolute IC. No post-holdout sign flip is permitted or performed.",
+  "holdout_accessed": false
+}

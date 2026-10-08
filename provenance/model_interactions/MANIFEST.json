@@ -1,0 +1,15 @@
+{
+  "policy": "These are immutable historical Codex interaction source records. Reproduction runs may copy and hash-verify them but must not relabel them as interactions generated during the reproduction run.",
+  "records": [
+    {
+      "path": "20261008_hypothesis_generation.json",
+      "generated_at": "2026-10-08T12:10:00+08:00",
+      "sha256": "53692F5F97D38FAD200FC29B73D909C4F9CB60D1981822672141F4AF40921871"
+    },
+    {
+      "path": "20261008_revision_feedback.json",
+      "generated_at": "2026-10-08T12:24:00+08:00",
+      "sha256": "23C9076F2B6277D013ACD773BB0215FD08B1B6A11A6878D057AAB2369AA5B055"
+    }
+  ]
+}

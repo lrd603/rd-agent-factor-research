@@ -1,0 +1,9 @@
+{
+  "started_at": "2026-09-30T08:05:15.327952+00:00",
+  "finished_at": "2026-09-30T08:05:52.082856+00:00",
+  "elapsed_seconds": 36.755,
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "command": "python run_experiment.py",
+  "status": "completed"
+}

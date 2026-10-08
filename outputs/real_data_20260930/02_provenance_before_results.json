@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-09-30T09:32:55.025850+00:00",
+  "hypothesis_generation": {
+    "type": "pre_registered_existing_logic",
+    "dynamic_agent_generation": false,
+    "truthful_description": "Three hypotheses and H1 selection originated in the earlier Codex-supervised prototype. This real run does not claim a new model call or regenerate them after viewing data.",
+    "hypotheses": [
+      "H1 skip-recent 60-day momentum",
+      "H2 volume-confirmed momentum",
+      "H3 low volatility"
+    ],
+    "implemented": "H1"
+  },
+  "benchmark": {
+    "type": "human_requested_pre_specification",
+    "formula": "close[t]/close[t-20]-1"
+  },
+  "revision_policy": {
+    "type": "pre_registered_formula_family",
+    "dynamic_decision_pending": true,
+    "maximum": 1,
+    "note": "V1 development metrics will be inspected once by Codex; the actual feedback record must exist before V2 runs."
+  }
+}
